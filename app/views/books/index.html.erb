@@ -11,7 +11,7 @@
 
 	<div class="col-xs-9">
 		<h2>Books index</h2>
-		<!--books一覧 -->
+
 		<table class="table table-hover table-inverse">
 			<thead>
 				<tr>
@@ -32,17 +32,13 @@
 					</td>
 					<td><%= link_to book.title, book_path(book), class: "book_#{book.id}" %></td>
 					<td><%= book.body %></td>
-					<div id="favorites_buttons_<%= book.id %>">
+					<td id="favorites_buttons_<%= book.id %>">
             <%= render partial: 'favorites/favorite', locals: { book: book} %>
-          </div>
+          </td>
 					<td>コメント数:<%= book.book_comments.count %></td>
 				</tr>
 				<% end %>
 			</tbody>
 		</table>
-
-		<!--books一覧 -->
-
-
 	</div>
 </div>
