@@ -9,7 +9,7 @@ class BookCommentsController < ApplicationController
     @comment.save
     @comments = @book.book_comments
     unless @comment.save
-      render template: "book_comments/create.js.erb"
+      render template: "book_comments/error.js.erb"
     end
   end
 
