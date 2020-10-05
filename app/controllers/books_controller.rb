@@ -60,6 +60,11 @@ class BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:title, :body)
   end
-  
+
+  # aaa(second: 1, first: 2)
+  # def aaa(first:, second:)
+  #   p first # => 2
+  #   p second # => 1
+  # end
 
 end

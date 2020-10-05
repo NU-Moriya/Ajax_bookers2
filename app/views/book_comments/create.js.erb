@@ -1,0 +1,4 @@
+
+$('#comment_button').append("<%= j(render partial: 'book_comments/comment', locals: {comment: @comment}) %>");
+$("#error_explanation").html("<%= j(render 'book_comments/error', { comment: @comment }) %>")
+$("textarea").val('')
