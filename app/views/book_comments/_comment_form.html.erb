@@ -1,15 +1,7 @@
 <%= form_with(model:[book,comment], remote: true) do |f| %>
-  <% if comment.errors.any? %>
-      <div id="error_explanation">
+  <div id="error_explanation">
+  </div>
 
-        <ul>
-          <% comment.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-  <% end %>
-  
   <%= f.text_area :content, class: "col-xs-8" %>
   <%= f.submit "送信" %>
 <% end %>
